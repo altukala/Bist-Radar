@@ -25,9 +25,12 @@ while true; do
   echo "5) Görsel rapor oluştur"
   echo "   Seçtiğin hisse için tarayıcıda sade bir özet açar."
   echo ""
+  echo "6) BIST30 görsel genel görünüm"
+  echo "   Tüm BIST30 hisselerini tarayıcıda filtrelenebilir tabloda gösterir."
+  echo ""
   echo "0) Çıkış"
   echo ""
-  echo -n "Seçimin (0-5): "
+  echo -n "Seçimin (0-6): "
   read CHOICE
 
   case "$CHOICE" in
@@ -52,6 +55,7 @@ while true; do
       read SYMBOL
       python rapor.py "$SYMBOL"
       ;;
+    6) python bist30_rapor.py ;;
     0) exit 0 ;;
     *)
       echo "Geçerli bir seçim yapmadın."
