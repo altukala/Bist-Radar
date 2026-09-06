@@ -1,0 +1,64 @@
+#!/bin/zsh
+
+# BIST Radar'ın tek giriş noktası.
+cd "$(dirname "$0")"
+source .venv/bin/activate
+
+while true; do
+  clear
+  echo "========================================"
+  echo "              BIST RADAR"
+  echo "========================================"
+  echo ""
+  echo "1) BIST30 genel görünüm"
+  echo "   Tüm BIST30 hisselerinin kısa/orta vadeli trendini gösterir."
+  echo ""
+  echo "2) Tek hisse analizi"
+  echo "   Trend, finansal kalite ve dikkat noktalarını birleştirir."
+  echo ""
+  echo "3) Hisse karşılaştır"
+  echo "   2-5 hisseyi trend ve temel finansal ölçütlerde karşılaştırır."
+  echo ""
+  echo "4) Şirket kalitesi"
+  echo "   Bir hissenin kârlılık, borç ve nakit üretimini gösterir."
+  echo ""
+  echo "5) Görsel rapor oluştur"
+  echo "   Seçtiğin hisse için tarayıcıda sade bir özet açar."
+  echo ""
+  echo "0) Çıkış"
+  echo ""
+  echo -n "Seçimin (0-5): "
+  read CHOICE
+
+  case "$CHOICE" in
+    1) python radar.py ;;
+    2)
+      echo -n "Hisse kodu (örnek: THYAO): "
+      read SYMBOL
+      python analiz.py "$SYMBOL"
+      ;;
+    3)
+      echo "2-5 hisse kodunu boşlukla yaz (örnek: THYAO TUPRS ASELS):"
+      read -A SYMBOLS
+      python karsilastir.py "${SYMBOLS[@]}"
+      ;;
+    4)
+      echo -n "Hisse kodu (örnek: THYAO): "
+      read SYMBOL
+      python kalite.py "$SYMBOL"
+      ;;
+    5)
+      echo -n "Hisse kodu (örnek: THYAO): "
+      read SYMBOL
+      python rapor.py "$SYMBOL"
+      ;;
+    0) exit 0 ;;
+    *)
+      echo "Geçerli bir seçim yapmadın."
+      ;;
+  esac
+
+  echo ""
+  echo "Ana menüye dönmek için bir tuşa bas."
+  read
+done
