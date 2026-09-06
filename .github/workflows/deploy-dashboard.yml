@@ -32,8 +32,11 @@ jobs:
           BIST_RADAR_NO_BROWSER: "1"
         run: |
           python bist30_rapor.py
+          python fon_tara.py
           mkdir -p site
-          cp reports/BIST30-*.html site/index.html
+          cp reports/BIST30-*.html site/bist30.html
+          cp reports/tefas-fon-tarama-*.html site/fonlar.html
+          cp pages_index.html site/index.html
       - name: GitHub Pages'i yapılandır
         uses: actions/configure-pages@v5
       - name: Sayfayı yükle

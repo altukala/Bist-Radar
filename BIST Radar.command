@@ -28,9 +28,15 @@ while true; do
   echo "6) BIST30 görsel genel görünüm"
   echo "   Tüm BIST30 hisselerini tarayıcıda filtrelenebilir tabloda gösterir."
   echo ""
+  echo "7) Fırsat taraması"
+  echo "   Şeffaf kurallarla araştırma önceliği oluşturan BIST30 filtresi."
+  echo ""
+  echo "8) TEFAS fon tarama"
+  echo "   Yatırım fonlarının getiri görünümünü ayrı bir ekranda gösterir."
+  echo ""
   echo "0) Çıkış"
   echo ""
-  echo -n "Seçimin (0-6): "
+  echo -n "Seçimin (0-8): "
   read CHOICE
 
   case "$CHOICE" in
@@ -56,6 +62,8 @@ while true; do
       python rapor.py "$SYMBOL"
       ;;
     6) python bist30_rapor.py ;;
+    7) python firsat_raporu.py ;;
+    8) python fon_tara.py ;;
     0) exit 0 ;;
     *)
       echo "Geçerli bir seçim yapmadın."
