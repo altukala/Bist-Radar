@@ -51,6 +51,9 @@ def analyze_stock(symbol: str) -> dict[str, object]:
         "last_price": last_price,
         "return_5d": return_5d,
         "return_20d": return_20d,
+        "distance_sma20": distance_sma20,
+        "distance_sma50": distance_sma50,
+        "annualized_volatility": annualized_volatility,
         "trend": trend,
         "reasons": reasons,
     }
