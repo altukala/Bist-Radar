@@ -34,9 +34,12 @@ while true; do
   echo "8) TEFAS fon tarama"
   echo "   Yatırım fonlarının getiri görünümünü ayrı bir ekranda gösterir."
   echo ""
+  echo "9) ABD piyasaları fırsat tarama"
+  echo "   Büyük ve likit ABD şirketlerini açık kurallarla araştırma için listeler."
+  echo ""
   echo "0) Çıkış"
   echo ""
-  echo -n "Seçimin (0-8): "
+  echo -n "Seçimin (0-9): "
   read CHOICE
 
   case "$CHOICE" in
@@ -64,6 +67,7 @@ while true; do
     6) python bist30_rapor.py ;;
     7) python firsat_raporu.py ;;
     8) python fon_tara.py ;;
+    9) python abd_firsat_tara.py ;;
     0) exit 0 ;;
     *)
       echo "Geçerli bir seçim yapmadın."

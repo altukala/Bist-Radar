@@ -10,6 +10,7 @@ Finder'da `BIST Radar.command` dosyasına çift tıkla. Açılan menüden yalnı
 - **6 — BIST30 görsel genel görünüm:** Tüm BIST30 hisselerinin trendini, gerekçeleriyle birlikte tek tabloda görmek için.
 - **7 — Fırsat taraması:** Kesin al/sat sinyali vermeden, daha derin araştırmaya öncelik verebilecek hisseleri şeffaf kurallarla elemek için.
 - **8 — TEFAS fon tarama:** Yatırım fonlarının 1 ay, 3 ay, yılbaşından beri ve 1 yıl getirilerini ayrı bir ekranda görmek için.
+- **9 — ABD piyasaları fırsat tarama:** Büyük ve likit ABD şirketlerinde fiyat momentumu ile temel kaliteyi birlikte ilk filtre olarak kullanmak için.
 
 Bu sistem yatırım tavsiyesi üretmez. Çıktıları bir araştırma başlangıcı olarak kullan; güncel KAP açıklamalarını ve kendi risk durumunu ayrıca değerlendir.
 
@@ -18,3 +19,4 @@ Bu sistem yatırım tavsiyesi üretmez. Çıktıları bir araştırma başlangı
 GitHub Pages ayarı etkinleştirildikten sonra BIST30 dashboard'u her iş günü Türkiye saatiyle yaklaşık 20:30'da güncellenir. Oluşan bağlantıyı Safari'de açıp ana ekrana ekleyebilirsin. GitHub Pages erişimi, kullandığın GitHub planına ve depo görünürlüğüne bağlıdır.
 
 Mobil ana sayfada hem **BIST30 Genel Görünüm** hem de **TEFAS Fon Tarama** bağlantıları yer alır.
+Mobil ana sayfada ayrıca **ABD Piyasaları Fırsat Tarama** bağlantısı yer alır.
